@@ -1,17 +1,20 @@
-import { View, Text, Button, Image } from "react-native";
+import { View, Text, Image } from "react-native";
 import React, { useEffect, useState } from "react";
 import {
   checkFirstLaunch,
   setFirstLaunchComplete,
 } from "@/utils/checkFirstLaunch";
 import { Redirect, useRouter } from "expo-router";
-
-type RouteType = "index" | "welcome";
+import { Button, ButtonText } from "@/components/ui/button";
+import { ChevronRight } from "lucide-react-native";
+import LanguageSelect from "@/components/LanguageSelect";
+import { useI18n } from "@/locales/i18nProvider";
 
 const WelcomeScreen = () => {
   const [loading, setLoading] = useState(true);
   const [firstLaunch, setFirstLaunch] = useState(false);
   const router = useRouter();
+  const { t } = useI18n();
 
   useEffect(() => {
     (async () => {
@@ -53,17 +56,32 @@ const WelcomeScreen = () => {
   }; // TODO: add on press to get started button to set first launch to fals
 
   return (
-    <View
-      style={{
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100%",
-        width: "100%",
-      }}
-    >
-      <Text>WELCOME</Text>
-      <Button title="GET STARTED" onPress={handleGetStarted} />
+    <View className=" flex pb-10 flex-col justify-between w-full container px-8 mx-auto h-full bg-[#63c7b2]">
+      <View>
+        <View className="flex mt-[200px] flex-col justify-center items-center">
+          <Image
+            source={require("../assets/images/welcome_2.png")}
+            style={{ width: 200, height: 200, backgroundColor: "#63c7b2" }}
+            className=" mt-20"
+            resizeMode="contain"
+          />
+        </View>
+
+        <Text className=" text-white font-winky text-start text-5xl pt-10 font-bold">
+          {t("welcome.title")}
+        </Text>
+        <Text className=" text-xl font-winky text-white mt-4 font-bold">
+          {t("welcome.subtitle")}
+        </Text>
+      </View>
+
+      <View className="flex flex-col gap-4">
+        <LanguageSelect />
+        <Button size="xl" className=" bg-[#d84727] rounded-3xl">
+          <ButtonText>{t("welcome.button")}</ButtonText>
+          <ChevronRight size={24} color={"#FFF"} />
+        </Button>
+      </View>
     </View>
   );
 };
