@@ -3,5 +3,15 @@
     "title": "Un Minuto de Salud",
     "subtitle": "Estamos aquí para ayudarte a ser más feliz y saludable proporcionándote las mejores soluciones para tu salud y bienestar.",
     "button": "Empecemos"
+  },
+  "intro": {
+    "title": "Comienza Tu Viaje de Salud",
+    "subtitle": "Monitorea tu rutina diaria de salud y da los pasos correctos hacia un estilo de vida saludable.",
+    "button": "Siguiente"
+  },
+  "legal": {
+    "terms": "Términos de Uso",
+    "privacy": "Política de Privacidad",
+    "agreement": "Al usar esta aplicación, aceptas sus términos de uso."
   }
 }

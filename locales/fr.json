@@ -3,5 +3,15 @@
     "title": "Une Minute de Santé",
     "subtitle": "Nous sommes là pour vous aider à être plus heureux et en meilleure santé en vous proposant les meilleures solutions pour votre santé et votre bien-être.",
     "button": "Commençons"
+  },
+  "intro": {
+    "title": "Commencez Votre Parcours Santé",
+    "subtitle": "Suivez votre routine santé quotidienne et prenez les bonnes mesures pour un mode de vie sain.",
+    "button": "Suivant"
+  },
+  "legal": {
+    "terms": "Conditions d'Utilisation",
+    "privacy": "Politique de Confidentialité",
+    "agreement": "En utilisant cette application, vous acceptez ses conditions d'utilisation."
   }
 }

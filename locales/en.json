@@ -3,5 +3,15 @@
     "title": "A Minute of Health",
     "subtitle": "We are here to help you to be happier and healthier by providing you with the best solutions for your health and wellness.",
     "button": "Let's Begin"
+  },
+  "intro": {
+    "title": "Start Your Health Journey",
+    "subtitle": "Track your daily health routine and take the right steps towards a healthy lifestyle.",
+    "button": "Next"
+  },
+  "legal": {
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "agreement": "By Using this application, you agree to its terms of use."
   }
 }

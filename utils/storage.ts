@@ -44,7 +44,9 @@ export const clearStorage = async () => {
 export const getStorageKeys = async () => {
   try {
     const keys = await AsyncStorage.getAllKeys();
-    return keys;
+    console.log(keys);
+
+    // return keys;
   } catch (e) {
     console.log(e, "ERROR GETTING STORAGE KEYS");
   }

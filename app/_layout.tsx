@@ -39,6 +39,8 @@ export default function RootLayout() {
         >
           <Stack>
             <Stack.Screen name="index" options={{ headerShown: false }} />
+            <Stack.Screen name="intro" options={{ headerShown: false }} />
+            <Stack.Screen name="legal" options={{ headerShown: false }} />
             <Stack.Screen name="home" />
             <Stack.Screen name="+not-found" />
           </Stack>
