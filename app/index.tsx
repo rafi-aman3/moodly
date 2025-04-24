@@ -7,6 +7,7 @@ import {
   Dimensions,
   Linking,
   Pressable,
+  TouchableOpacity,
 } from "react-native";
 import React, { useEffect, useRef, useState } from "react";
 import {
@@ -67,7 +68,7 @@ const WelcomeScreen = () => {
   }
 
   const handleNexButton = async () => {
-    router.push("/legal");
+    router.push("/preference");
   };
 
   const handleNextSlide = () => {
@@ -140,6 +141,7 @@ const WelcomeScreen = () => {
               },
             ],
           }}
+          pointerEvents="box-none"
         >
           <>
             <View
@@ -187,12 +189,13 @@ const WelcomeScreen = () => {
                 <View className="flex flex-col justify-center mb-4 items-center gap-1">
                   <View className=" flex flex-row justify-evenly gap-10">
                     <Pressable onPress={handleTermsPress}>
-                      <Text className="text-white text-lg font-bold font-winky active:underline">
+                      <Text className="text-white text-lg font-bold font-winky">
                         {t("legal.terms")}
                       </Text>
                     </Pressable>
+
                     <Pressable onPress={handlePrivacyPress}>
-                      <Text className="text-white font-bold text-lg font-winky active:underline">
+                      <Text className="text-white text-lg font-bold font-winky">
                         {t("legal.privacy")}
                       </Text>
                     </Pressable>
